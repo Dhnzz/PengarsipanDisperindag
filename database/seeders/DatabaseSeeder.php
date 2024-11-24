@@ -17,24 +17,25 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
+        User::factory()->create([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => 'admin123',
+        ]);
+
+        // $category = Category::create([
+        //     'name' => 'Surat Masuk',
+        //     'slug' => str_replace(' ','',Str::lower('Surat Masuk')),
         // ]);
 
-        $category = Category::create([
-            'name' => 'Surat Masuk',
-            'slug' => str_replace(' ','',Str::lower('Surat Masuk')),
-        ]);
-
-        File::create([
-            'name' => 'dummy_file_' . Str::random(5) . '.txt',
-            'path' => 'uploads/' . $category->slug . '/dummy_file_' . Str::random(10) . '.txt',
-            'from' => 'Source ' . Str::random(5),
-            'to' => 'Destination ' . Str::random(5),
-            'category_id' => $category->id,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        // File::create([
+        //     'name' => 'dummy_file_' . Str::random(5) . '.txt',
+        //     'path' => 'uploads/' . $category->slug . '/dummy_file_' . Str::random(10) . '.txt',
+        //     'from' => 'Source ' . Str::random(5),
+        //     'to' => 'Destination ' . Str::random(5),
+        //     'category_id' => $category->id,
+        //     'created_at' => now(),
+        //     'updated_at' => now(),
+        // ]);
     }
 }
