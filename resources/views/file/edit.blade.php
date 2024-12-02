@@ -52,9 +52,14 @@
                             </div>
 
                             <div class="col-md-12">
+                                <label for="file">Tanggal Dokumen</label>
+                                <input type="date" class="form-control" name="date" id="date" value="{{$file->date}}" required>
+                            </div>
+                            
+                            <div class="col-md-12">
                                 <label for="file">Upload File</label>
                                 <div class="input-group mb-3">
-                                    <input type="file" class="form-control" name="file" id="file" required>
+                                    <input type="file" class="form-control" name="file" id="file">
                                     <button type="button" class="btn btn-primary btn-sm show-file-btn"
                                         {{ $file->path == null ? 'disabled' : '' }} data-modal="{{ json_encode($file) }}"
                                         data-bs-toggle="modal" data-bs-target="#modalId">

@@ -45,7 +45,7 @@
                                 <i class="bi bi-file-earmark"></i>
                             </div>
                             <div class="ps-3">
-                                <h6>{{ $fileCount ?? 0 }} Buah</h6>
+                                <h6>{{ $countFile ?? 0 }} Buah</h6>
                             </div>
                         </div>
                     </div>

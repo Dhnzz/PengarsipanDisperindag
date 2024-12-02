@@ -63,6 +63,7 @@ class FileController extends Controller
             'from' => $request->input('from'),
             'to' => $request->input('to'),
             'category_id' => $request->input('category_id'),
+            'date' => $request->input('date'),
         ]);
         return redirect()->route('file.index')->with('success', 'Berhasil menginputkan arsip');
     }
@@ -137,6 +138,7 @@ class FileController extends Controller
             'from' => $request->input('from'),
             'to' => $request->input('to'),
             'category_id' => $request->input('category_id'),
+            'date' => $request->input('date'),
         ]);
 
         return redirect()->route('file.index')->with('success', 'Berhasil mengupdate arsip');

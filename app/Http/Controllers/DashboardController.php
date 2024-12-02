@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\{File};
 
 class DashboardController extends Controller
 {
@@ -12,6 +13,7 @@ class DashboardController extends Controller
         $subtitle = [
             'subtitle' => 'Dashboard',
         ];
-        return view('dashboard.index', compact('title','subtitle'));
+        $countFile = File::all()->count();
+        return view('dashboard.index', compact('title','subtitle','countFile'));
     }
 }

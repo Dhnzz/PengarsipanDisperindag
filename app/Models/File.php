@@ -13,6 +13,7 @@ class File extends Model
         'from',
         'to',
         'category_id',
+        'date',
     ];
 
     public function category(): BelongsTo

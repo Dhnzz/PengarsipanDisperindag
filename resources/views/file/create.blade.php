@@ -49,6 +49,10 @@
                             </div>
 
                             <div class="col-md-12">
+                                <label for="file">Tanggal Dokumen</label>
+                                <input type="date" class="form-control" name="date" id="date" required>
+                            </div>
+                            <div class="col-md-12">
                                 <label for="file">Upload File</label>
                                 <input type="file" class="form-control" name="file" id="file" required>
                             </div>

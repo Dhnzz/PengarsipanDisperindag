@@ -97,7 +97,7 @@
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->from }}</td>
                                         <td>{{ $item->to }}</td>
-                                        <td>{{ $item->created_at->format('d/m/Y') }}</td>
+                                        <td>{{ $item->date }}</td>
                                         <td class="d-flex flex-col flex-sm-row gap-2 align-middle">
                                             <a href="{{ route('file.show', $item->id) }}"
                                                 class="btn btn-sm btn-primary text-white">Detail</a>
