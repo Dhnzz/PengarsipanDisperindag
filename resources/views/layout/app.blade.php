@@ -48,7 +48,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/logo.png" alt="">
+                <img src="{{ asset('assets') }}/img/logo_disperdagin.png" alt="">
                 <span class="d-none d-lg-block">Arsipin</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -119,6 +119,7 @@
 
     </main><!-- End #main -->
 
+    @include('layout.footer')
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets') }}/vendor/apexcharts/apexcharts.min.js"></script>

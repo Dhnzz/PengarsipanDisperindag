@@ -38,9 +38,30 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .bg{
+        background-image: url('assets/img/bg-kantor.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: normal;
+    }
+    .bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .opa-100{
+        opacity: 100%;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg">
 
     <main>
         <div class="container">
@@ -51,9 +72,9 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
-                            <div class="d-flex justify-content-center py-4">
+                            <div class="d-flex justify-content-center py-4 opa-100">
                                 <a href="index.html" class="logo d-flex align-items-center w-auto">
-                                    <img src="assets/img/logo.png" alt="">
+                                    <img src="assets/img/logo_disperdagin.png" style="max-width:50px;max-height:50px" alt="">
                                     <span class="d-none d-lg-block">ARSIPIN</span>
                                 </a>
                             </div><!-- End Logo -->

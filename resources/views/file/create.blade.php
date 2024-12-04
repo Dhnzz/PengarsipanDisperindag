@@ -48,7 +48,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <label for="file">Tanggal Dokumen</label>
                                 <input type="date" class="form-control" name="date" id="date" required>
                             </div>
