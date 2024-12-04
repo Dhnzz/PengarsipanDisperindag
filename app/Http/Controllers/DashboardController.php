@@ -14,6 +14,14 @@ class DashboardController extends Controller
             'subtitle' => 'Dashboard',
         ];
         $countFile = File::all()->count();
-        return view('dashboard.index', compact('title','subtitle','countFile'));
+        $fileYearData = [];
+        $years = File::distinct()->pluck('date')->map(function($date) {
+            return date('Y', strtotime($date));
+        })->sort();
+        foreach ($years as $year) {
+            $fileYearData[$year] = File::whereYear('date', $year)->count();
+        }
+        // dd($fileYearData);
+        return view('dashboard.index', compact('title','subtitle','countFile','fileYearData'));
     }
 }

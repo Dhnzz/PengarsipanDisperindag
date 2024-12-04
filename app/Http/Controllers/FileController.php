@@ -41,7 +41,7 @@ class FileController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'file' => 'nullable|file|mimes:jpg,png,pdf,docx|max:2048', // File baru bersifat opsional
+            'file' => 'nullable|file|mimes:jpg,png,pdf,docx', // File baru bersifat opsional
             'category_id' => 'required|exists:categories,id', // Validasi category_id
             'from' => 'required|string|max:255', // Validasi data tambahan 'from'
             'to' => 'required|string|max:255', // Validasi data tambahan 'to'
