@@ -44,14 +44,14 @@
 <body>
 
     <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
+    <header id="header" class="header fixed-top d-flex align-items-center bg-primary">
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
                 <img src="{{ asset('assets') }}/img/logo_disperdagin.png" alt="">
-                <span class="d-none d-lg-block">Arsipin</span>
+                <span class="d-none d-lg-block text-light">Arsipin</span>
             </a>
-            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <i class="bi bi-list toggle-sidebar-btn text-light"></i>
         </div><!-- End Logo -->
 
         <nav class="header-nav ms-auto">
@@ -68,7 +68,7 @@
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
                         data-bs-toggle="dropdown">
                         <img src="assets/img/user-default.jpg" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">User</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2 text-light">User</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
