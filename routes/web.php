@@ -9,6 +9,8 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('change_password_view', [AuthController::class, 'change_password_view'])->name('change_password_view');
+    Route::post('change_password', [AuthController::class, 'change_password'])->name('change_password');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::prefix('dashboard')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
