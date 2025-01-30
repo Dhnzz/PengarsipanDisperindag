@@ -12,9 +12,25 @@
                             @method('PUT')
                             <div class="col-md-12">
                                 <div class="form-floating">
+                                    <input type="text" class="form-control" name="nomor_surat" id="nomor_surat"
+                                        placeholder="From" required value="{{ $file->nomor_surat }}">
+                                    <label for="nomor_surat">Nomor Surat</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating">
                                     <input type="text" class="form-control" name="name" id="name"
                                         placeholder="From" required value="{{ $file->name }}">
                                     <label for="name">Nama File</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" name="desc" id="desc" placeholder="From" required
+                                        cols="30" rows="20" style="height: 150px">{{ $file->desc }}</textarea>
+                                    <label for="desc">Keterangan Surat</label>
                                 </div>
                             </div>
 
@@ -55,10 +71,10 @@
                                 <label for="file">Tanggal Dokumen</label>
                                 <input type="date" class="form-control" name="date" id="date" value="{{$file->date}}" required>
                             </div>
-                            
+
                             <div class="col-md-12">
                                 <label for="file">Upload File</label>
-                                <div class="input-group mb-3">
+                                <div class="mb-3 input-group">
                                     <input type="file" class="form-control" name="file" id="file">
                                     <button type="button" class="btn btn-primary btn-sm show-file-btn"
                                         {{ $file->path == null ? 'disabled' : '' }} data-modal="{{ json_encode($file) }}"
@@ -70,7 +86,7 @@
 
                             <div class="text-start">
                                 <button type="submit" class="btn btn-sm btn-success">Simpan</button>
-                                <button type="reset" class="btn btn-sm btn-warning text-white">Reset</button>
+                                <button type="reset" class="text-white btn btn-sm btn-warning">Reset</button>
                             </div>
                         </form>
 

@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
+            $table->string('nomor_surat');
             $table->string('name');
+            $table->string('desc');
             $table->string('path');
             $table->string('from');
             $table->string('to');

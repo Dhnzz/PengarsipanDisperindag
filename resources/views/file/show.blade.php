@@ -11,27 +11,35 @@
                                 Kembali</a>
                         </div>
                         <h5 class="card-title">Data {{ $title }}</h5>
-                        <div class="row mb-3">
+                        <div class="mb-3 row">
+                            <div class="col-md-4 fw-bold">Nomor Surat:</div>
+                            <div class="col-md-8">{{ $file->nomor_surat }}</div>
+                        </div>
+                        <div class="mb-3 row">
                             <div class="col-md-4 fw-bold">Nama File:</div>
                             <div class="col-md-8">{{ $file->name }}</div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="mb-3 row">
+                            <div class="col-md-4 fw-bold">Keterangan Surat:</div>
+                            <div class="col-md-8">{{ $file->desc }}</div>
+                        </div>
+                        <div class="mb-3 row">
                             <div class="col-md-4 fw-bold">Kategori:</div>
                             <div class="col-md-8">{{ $file->category->name }}</div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="mb-3 row">
                             <div class="col-md-4 fw-bold">Pengirim (From):</div>
                             <div class="col-md-8">{{ $file->from }}</div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="mb-3 row">
                             <div class="col-md-4 fw-bold">Penerima (To):</div>
                             <div class="col-md-8">{{ $file->to }}</div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="mb-3 row">
                             <div class="col-md-4 fw-bold">Tanggal Unggah:</div>
                             <div class="col-md-8">{{ $file->created_at->format('d F Y') }}</div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="mb-3 row">
                             <div class="col-md-4 fw-bold">Aksi:</div>
                             <div class="col-md-8">
                                 @if (substr($file->path, -5) != '.docx')

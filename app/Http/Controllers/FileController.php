@@ -58,7 +58,9 @@ class FileController extends Controller
         }
 
         $createFile = File::create([
+            'nomor_surat' => $request->input('nomor_surat'),
             'name' => $request->input('name'),
+            'desc' => $request->input('desc'),
             'path' => $filePath,
             'from' => $request->input('from'),
             'to' => $request->input('to'),
@@ -133,7 +135,9 @@ class FileController extends Controller
 
         // Update arsip di database
         $fileRecord->update([
+            'nomor_surat' => $request->input('nomor_surat'),
             'name' => $request->input('name'),
+            'desc' => $request->input('desc'),
             'path' => $filePath,
             'from' => $request->input('from'),
             'to' => $request->input('to'),

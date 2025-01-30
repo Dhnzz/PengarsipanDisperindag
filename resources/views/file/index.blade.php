@@ -39,7 +39,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="float-end m-3">
+                        <div class="m-3 float-end">
                             <a href="{{ route('file.create') }}" class="btn btn-sm btn-success">Tambah {{$title}}</a>
                         </div>
                         <h5 class="card-title">Data {{ $title }}</h5>
@@ -80,6 +80,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Nomor Surat</th>
                                     <th>Nama File</th>
                                     <th>Pengirim</th>
                                     <th>Penerima</th>
@@ -94,15 +95,16 @@
                                 @foreach ($file as $item)
                                     <tr>
                                         <td>{{ $no++ }}</td>
+                                        <td>{{ $item->nomor_surat }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->from }}</td>
                                         <td>{{ $item->to }}</td>
                                         <td>{{ $item->date }}</td>
-                                        <td class="d-flex flex-col flex-sm-row gap-2 align-middle">
+                                        <td class="flex-col gap-2 align-middle d-flex flex-sm-row">
                                             <a href="{{ route('file.show', $item->id) }}"
-                                                class="btn btn-sm btn-primary text-white">Detail</a>
+                                                class="text-white btn btn-sm btn-primary">Detail</a>
                                             <a href="{{ route('file.edit', $item->id) }}"
-                                                class="btn btn-sm btn-warning text-white">Edit</a>
+                                                class="text-white btn btn-sm btn-warning">Edit</a>
                                             <form action="{{ route('file.destroy', $item->id) }}" method="POST">
                                                 @method('DELETE')
                                                 @csrf

@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class File extends Model
 {
     protected $fillable = [
+        'nomor_surat',
         'name',
+        'desc',
         'path',
         'from',
         'to',

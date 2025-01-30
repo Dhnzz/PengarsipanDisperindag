@@ -11,9 +11,25 @@
 
                             <div class="col-md-12">
                                 <div class="form-floating">
+                                    <input type="text" class="form-control" name="nomor_surat" id="nomor_surat"
+                                        placeholder="From" value="{{ old('nomor_surat') }}" required>
+                                    <label for="nomor_surat">Nomor Surat</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating">
                                     <input type="text" class="form-control" name="name" id="name"
                                         placeholder="From" value="{{ old('name') }}" required>
                                     <label for="name">Nama File</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" name="desc" id="desc" placeholder="From" value="{{ old('desc') }}" required
+                                        cols="30" rows="20" style="height: 150px"></textarea>
+                                    <label for="desc">Keterangan Surat</label>
                                 </div>
                             </div>
 
@@ -59,7 +75,7 @@
 
                             <div class="text-start">
                                 <button type="submit" class="btn btn-sm btn-success">Simpan</button>
-                                <button type="reset" class="btn btn-sm btn-warning text-white">Reset</button>
+                                <button type="reset" class="text-white btn btn-sm btn-warning">Reset</button>
                             </div>
                         </form>
 
